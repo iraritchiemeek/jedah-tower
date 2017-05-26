@@ -1,0 +1,38 @@
+html, body {
+	user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	height: 100%;
+	width: 100%;
+	margin: 0 0 0 0;
+	padding: 5px 5px 10px 5px;
+	box-sizing: border-box;
+}
+
+.title {
+	h1 {
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+	}
+}
+
+.info {
+	height: 420px;
+	width: 100%;
+	position: relative;
+	p {
+		margin: 5px 0 5px 0;
+	}
+}
+
+.images {
+	height: 400px;
+	width: 100%;
+	background-color: black;
+}
+
+.music {
+	height: 400px;
+	width: 100%;
+	background-color: white;
+}
