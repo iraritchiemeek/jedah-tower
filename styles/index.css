@@ -17,32 +17,92 @@ html, body {
     line-height: 75px;
     text-align: center;
     margin: 0 0 0 0;
-    padding: 0 0 0 0; }
+    padding: 0 0 0 0;
+    font-size: 2em; }
+  @media only screen and (min-width: 79em) {
+    .title {
+      display: none; } }
 
 .info {
   display: inline-block;
-  width: 100%;
   position: relative;
-  margin: 0 0 10px 0; }
+  margin: 0 10px 10px 10px;
+  text-align: center; }
   .info p {
     margin: 5px 0 5px 0; }
+  @media only screen and (min-width: 79em) {
+    .info {
+      display: none; } }
 
 .music {
   height: 450px;
   width: 100%;
   margin: 0 0 10px 0; }
+  @media only screen and (min-width: 79em) {
+    .music {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      width: 40%;
+      height: 60%;
+      left: 60%;
+      padding: 0 40px 0 40px;
+      box-sizing: border-box;
+      position: absolute; } }
 
 .images {
+  position: relative;
   height: 400px;
   width: 100%; }
-  .images img {
+  .images__img {
     position: absolute;
-    top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    position: relative;
-    max-height: 100%;
-    max-width: 100%; }
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    height: 90%;
+    width: 100%;
+    background-position: bottom;
+    position: relative; }
+  @media only screen and (min-width: 79em) {
+    .images {
+      width: 60%;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box;
+      border-right: 5px solid #3F51B5; }
+      .images__img {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%; } }
+
+.images-arrows {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%); }
+  @media only screen and (min-width: 79em) {
+    .images-arrows {
+      top: -10%;
+      left: calc(100% - 150px);
+      position: relative;
+      height: 10%;
+      width: 150px; }
+      .images-arrows__arrow {
+        cursor: pointer;
+        height: 100%;
+        width: 70px;
+        float: left;
+        margin: 0 2.5px 0 2.5px; }
+        .images-arrows__arrow span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          position: relative;
+          display: inline-block; } }
 
 /*# sourceMappingURL=index.css.map */

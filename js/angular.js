@@ -1,1 +1,0 @@
-var hakApp = angular.module('hakApp', ['ngRoute']);
