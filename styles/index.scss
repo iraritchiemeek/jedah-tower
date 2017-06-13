@@ -1,17 +1,17 @@
 $black: #222222;
 $red: #F85658;
-$blue: #3F51B5;
+$blue: rgb(0, 119, 119);
 
 $browser-context: 16;
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em;
 }
 
-$medium-breakpoint:  em(1264) !default;
+$small-breakpoint: em(1024) !default;
 
 @mixin respond-to($media) {
   @if $media == non-mobile {
-    @media only screen and (min-width: $medium-breakpoint) { @content; }
+    @media only screen and (min-width: $small-breakpoint) { @content; }
   }
 }
 
@@ -53,12 +53,15 @@ html, body {
 .title {
 	height: 75px;
 	h1 {
+		@include center;
+		position: relative;
 		font-weight: 100;
 		line-height: 75px;
 		text-align: center;
 		margin: 0 0 0 0;
 		padding: 0 0 0 0;
 		font-size: 2em;
+		display: inline-block;
 	}
 	@include respond-to(non-mobile) {
 		display: none;
@@ -82,25 +85,30 @@ html, body {
 	height: 450px;
 	width: 100%;
 	margin: 0 0 10px 0;
+	box-sizing: border-box;
+	position: relative;
+	padding: 0 10px 0 10px;
 	@include respond-to(non-mobile) {
+		padding: 0 40px 0 40px;
+		position: absolute;
 		@include center-vertical;
 		width: 40%;
 		height: 60%;
 		left: 60%;
-		padding: 0 40px 0 40px;
-		box-sizing: border-box;
-		position: absolute;
 	}
 }
 
 .images {
+	background-color: rgba(256,256,256, 0.1);
 	position: relative;
 	&__img {
 		@include center-horizontal;
 		height: 90%;
 		width: 100%;
-		background-position: bottom;
+		background-position: top;
 		position: relative;
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 	height: 400px;
 	width: 100%;
@@ -111,8 +119,6 @@ html, body {
 		box-sizing: border-box;
 		border-right: 5px solid $blue;
 		&__img {
-			background-size: contain;
-			background-repeat: no-repeat;
 			background-position: center;
 			height: 100%;
 			width: 100%;
@@ -122,23 +128,29 @@ html, body {
 
 .images-arrows {
 	@include center-horizontal;
+	position: relative;
+	height: 10%;
+	width: 155px;
+	&__arrow {
+		width: 70px;
+		float: left;
+		margin: 10px 3px 0 3px;
+		span {
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+			width: 100%;
+			text-align: center;
+			position: relative;
+			display: inline-block;
+			background-color: $blue;
+			border-radius: 5px;
+		}
+	}
 	@include respond-to(non-mobile) {
 		top: -10%;
 		left: calc(100% - 150px);
-		position: relative;
-		height: 10%;
-		width: 150px;
 		&__arrow {
 			cursor: pointer;
 			height: 100%;
-			width: 70px;
-			float: left;
-			margin: 0 2.5px 0 2.5px;
-			span {
-				@include center;
-				position: relative;
-				display: inline-block;
-			}
 		}
 	}
 }
