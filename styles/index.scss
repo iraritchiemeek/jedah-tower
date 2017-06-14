@@ -52,6 +52,7 @@ html, body {
 
 .title {
 	height: 75px;
+	background-color: $blue;
 	h1 {
 		@include center;
 		position: relative;
@@ -99,7 +100,7 @@ html, body {
 }
 
 .images {
-	background-color: rgba(256,256,256, 0.1);
+	padding: 5px 0 0 0;
 	position: relative;
 	&__img {
 		@include center-horizontal;
@@ -113,6 +114,7 @@ html, body {
 	height: 400px;
 	width: 100%;
 	@include respond-to(non-mobile) {
+		padding: 0 0 0 0;
 		width: 60%;
 		height: 100%;
 		position: relative;
@@ -146,11 +148,12 @@ html, body {
 		}
 	}
 	@include respond-to(non-mobile) {
-		top: -10%;
-		left: calc(100% - 150px);
+		position: absolute;
+		top: 25px;
+		left: calc(100% - 100px);
 		&__arrow {
 			cursor: pointer;
-			height: 100%;
+			// height: 100%;
 		}
 	}
 }

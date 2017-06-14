@@ -11,7 +11,8 @@ html, body {
   color: white; }
 
 .title {
-  height: 75px; }
+  height: 75px;
+  background-color: #007777; }
   .title h1 {
     position: absolute;
     top: 50%;
@@ -61,7 +62,7 @@ html, body {
       left: 60%; } }
 
 .images {
-  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px 0 0 0;
   position: relative;
   height: 400px;
   width: 100%; }
@@ -78,6 +79,7 @@ html, body {
     background-repeat: no-repeat; }
   @media only screen and (min-width: 64em) {
     .images {
+      padding: 0 0 0 0;
       width: 60%;
       height: 100%;
       position: relative;
@@ -110,10 +112,10 @@ html, body {
       border-radius: 5px; }
   @media only screen and (min-width: 64em) {
     .images-arrows {
-      top: -10%;
-      left: calc(100% - 150px); }
+      position: absolute;
+      top: 25px;
+      left: calc(100% - 100px); }
       .images-arrows__arrow {
-        cursor: pointer;
-        height: 100%; } }
+        cursor: pointer; } }
 
 /*# sourceMappingURL=index.css.map */
