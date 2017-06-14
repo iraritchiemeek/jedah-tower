@@ -14,7 +14,6 @@ html, body {
   height: 75px;
   background-color: #007777; }
   .title h1 {
-    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -29,7 +28,50 @@ html, body {
     display: inline-block; }
   @media only screen and (min-width: 64em) {
     .title {
-      display: none; } }
+      position: absolute;
+      z-index: 2;
+      left: 60%;
+      top: 0;
+      height: 100px;
+      margin: 0 0 0 10px;
+      color: #222222;
+      font-size: 1.5em; } }
+
+.nav {
+  display: none; }
+  @media only screen and (min-width: 64em) {
+    .nav {
+      padding: 0 0 0 115px;
+      box-sizing: border-box;
+      display: inline;
+      position: absolute;
+      left: 60%;
+      top: 0;
+      width: 40%;
+      min-width: 565px;
+      height: 100px;
+      background-color: #007777; }
+      .nav__button {
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        position: relative;
+        float: left;
+        margin: 0 10px 0 10px;
+        width: 100px;
+        height: 40px;
+        background-color: #222222;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); }
+        .nav__button--active {
+          background-color: rgba(255, 255, 255, 0.3); }
+      .nav span {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        position: relative;
+        display: inline-block; } }
 
 .info {
   display: inline-block;
@@ -53,7 +95,6 @@ html, body {
     .music {
       padding: 0 40px 0 40px;
       position: absolute;
-      position: absolute;
       top: 50%;
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
@@ -67,7 +108,6 @@ html, body {
   height: 400px;
   width: 100%; }
   .images__img {
-    position: absolute;
     left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -83,15 +123,13 @@ html, body {
       width: 60%;
       height: 100%;
       position: relative;
-      box-sizing: border-box;
-      border-right: 5px solid #007777; }
+      box-sizing: border-box; }
       .images__img {
         background-position: center;
         height: 100%;
         width: 100%; } }
 
 .images-arrows {
-  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);

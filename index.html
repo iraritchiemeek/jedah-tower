@@ -12,7 +12,12 @@
 	<script src="js/app.js"></script>
 </head>
 <body ng-controller="mainController">
-	<div class="title"><h1>hak.nyc</h1></div>
+	<div class="title"><h1>HAK</h1></div>
+	<div class="nav">
+		<div class="nav__button nav__button--music nav__button--active"><span>Music</span></div>
+		<div class="nav__button nav__button--videos"><span>Videos</span></div>
+		<div class="nav__button nav__button--about"><span>About</span></div>
+	</div>
 	<div class="images">
 		<div class="images__img" style="background-image: url('imgs/{{gallery[index]}}');"></div>
 		<div class="images-arrows">
