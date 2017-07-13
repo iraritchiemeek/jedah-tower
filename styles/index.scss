@@ -89,16 +89,19 @@ html, body {
 		background-color: $blue;
 		&__button {
 			@include center-vertical;
+			cursor: pointer;
 			position: relative;
 			float: left;
-			margin: 0 10px 0 10px;
+			// margin: 0 10px 0 10px;
 			width: 100px;
-			height: 40px;
-			background-color: $black;
-			border-radius: 5px;
-			box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+			height: 100%;
+			color: black;
+			font-size: 1.3em;
+			// background-color: $black;
 			&--active {
-				background-color: rgba(256,256,256, 0.3);
+				box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+				background-color: rgba(0,0,0, 0.3);
+				color: white;
 			}
 		}
 		span {
@@ -118,7 +121,7 @@ html, body {
 		margin: 5px 0 5px 0;
 	}
 	@include respond-to(non-mobile) {
-		@include center-vertical;
+		top: 120px;
 		position: absolute;
 		width: 40%;
 		left: 60%;
@@ -138,11 +141,12 @@ html, body {
 	position: relative;
 	padding: 0 10px 0 10px;
 	@include respond-to(non-mobile) {
+		top: 120px;
 		padding: 0 40px 0 40px;
 		position: absolute;
-		@include center-vertical;
 		width: 40%;
 		height: 60%;
+		min-height: 440px;
 		left: 60%;
 	}
 }
@@ -167,11 +171,12 @@ html, body {
 		height: 100%;
 		position: relative;
 		box-sizing: border-box;
-		// border-right: 5px solid $blue;
 		&__img {
+			@include center;
+			position: relative;
 			background-position: center;
-			height: 100%;
-			width: 100%;
+			height: 95%;
+			width: 95%;
 		}
 	}
 }
@@ -197,11 +202,58 @@ html, body {
 	}
 	@include respond-to(non-mobile) {
 		position: absolute;
-		top: 25px;
-		left: calc(100% - 100px);
+		bottom: 15px;
+		left: calc(100% - 70px);
 		&__arrow {
 			cursor: pointer;
 			// height: 100%;
+		}
+	}
+}
+
+.videos {
+	display: none;
+	@include respond-to(non-mobile) {
+		top: 120px;
+		display: inline-block;
+		position: absolute;
+		width: 40%;
+		min-width: 500px;
+		height: 60%;
+		min-height: 500px;
+		left: 60%;
+	}
+	iframe {
+		@include center-horizontal;
+		top: 0;
+		position: relative;
+		width: 95%;
+		height: 70%;
+		min-height: 310px;
+	}
+	&__nav {
+		@include center-horizontal;
+		position: relative;
+		margin: 30px 0 0 0;
+		width: 200px;
+		height: 50px;
+	}
+	&__button {
+		height: 100%;
+		width: calc(50% - 20px);
+		margin: 0 10px 0 10px;
+		float: left;
+		background-color: $blue;
+		border-radius: 5px;
+		cursor: pointer;
+		span {
+			@include center;
+			position: relative;
+			display: inline-block;
+		}
+		&--active {
+			box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+			background-color: rgba(0, 119, 119, 0.7);
 		}
 	}
 }
