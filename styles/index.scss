@@ -164,14 +164,21 @@ html, body {
 		padding: 0 0 0 0;
 		width: 60%;
 		height: 100%;
-		position: relative;
+		position: absolute;
 		box-sizing: border-box;
 		&__img {
 			@include center;
-			position: relative;
+			position: absolute;
 			background-position: center;
 			height: 95%;
 			width: 95%;
+			&--portrait {
+				top: 35%;
+				left: 78%;
+				height: 55%;
+				width: 50%;
+				z-index: 2;
+			}
 		}
 	}
 }
