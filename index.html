@@ -30,6 +30,14 @@
 		<div ng-click="currentSection = 'videos'" ng-class="{true: 'nav__button nav__button--videos nav__button--active', false: 'nav__button nav__button--videos'}[currentSection == 'videos']"><span>Videos</span></div>
 		<div ng-click="currentSection = 'info'" ng-class="{true: 'nav__button nav__button--about nav__button--active', false: 'nav__button nav__button--about'}[currentSection == 'info']"><span>About</span></div>
 	</div>
+	<div class="popup" ng-init="show_popup = true" ng-show="show_popup">
+		<div class="popup__inner">
+			<h2>Beef. x Hak July T-Shirt</h2>
+			<div class="popup__image"></div>
+			<div class="popup__close" ng-click="show_popup = false">close</div>
+			<a href="http://beef.ph/product/j-u-l-y-tee/"><span>Buy</span></a>
+		</div>
+	</div> 
 	<div class="images">
 		<div class="images__img images__img--portrait" style="background-image: url('imgs/performance2.jpg');"></div>
 		<div class="images__img images__img--landscape" style="background-image: url('imgs/performance1.jpg');"></div>
