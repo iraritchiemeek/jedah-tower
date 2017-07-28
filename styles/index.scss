@@ -123,6 +123,7 @@ html, body {
 }
 
 .music {
+	top: 250px;
 	height: 450px;
 	width: 100%;
 	margin: 0 0 10px 0;
@@ -145,8 +146,9 @@ html, body {
 	position: relative;
 	&__img {
 		@include center-horizontal;
+		margin: 0 0 10px 0;
 		height: 90%;
-		width: 100%;
+		width: 95%;
 		background-position: top;
 		position: relative;
 		background-size: contain;
