@@ -4,7 +4,8 @@
 	<title>Hak</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
-	<meta name="description" content="HAKS WEBSITE" />
+	<meta property="og:description" content="Hak" />
+	<meta property="og:image" content="imgs/performance2.jpg" />
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -49,9 +50,11 @@
 	<div class="videos" ng-show="currentSection == 'videos'">
 		<iframe ng-show="currentVideo == 'aura'" src="https://www.youtube.com/embed/VN4oEB-qtrM?rel=0" frameborder="0" allowfullscreen></iframe>
 		<iframe ng-show="currentVideo == 'solitude'" src="https://www.youtube.com/embed/b_jx0XvpTVo?rel=0" frameborder="0" allowfullscreen></iframe>
+		<iframe ng-show="currentVideo == 'beach'" src="https://www.youtube.com/embed/BXb9YQY_lxg?rel=0" frameborder="0" allowfullscreen></iframe>
 		<div class="videos__nav" ng-init="currentVideo = 'aura'">
 			<div ng-click="currentVideo = 'aura'" ng-class="currentVideo=='aura' ? 'videos__button videos__button--active' : 'videos__button'"><span>Aura</span></div>
 			<div ng-click="currentVideo = 'solitude'" ng-class="currentVideo=='solitude' ? 'videos__button videos__button--active' : 'videos__button'"><span>Solitude</span></div>
+			<div ng-click="currentVideo = 'beach'" ng-class="currentVideo=='beach' ? 'videos__button videos__button--active' : 'videos__button'"><span>Beach Bum</span></div>
 		</div>
 	</div>
 </body>
