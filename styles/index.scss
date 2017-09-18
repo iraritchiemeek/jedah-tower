@@ -39,248 +39,90 @@ html, body {
 	margin: 0 0 0 0;
 	box-sizing: border-box;
 	font-family: 'Open Sans';
-	// background-color: $black;
+	background-color: black;
+	cursor: pointer;
 }
 
-.title {
-	height: 75px;
-	h1 {
+.triple-image-container {
+	height: 100%;
+	width: 100%;
+	&__image {
+		width: 100%;
+		margin: 5px 0 5px;
+		height: calc(100%/3 - 10px);
+		float: left;
+	}
+	@include respond-to('non-mobile') {
+		@include center-vertical;
+		box-sizing: border-box;
+		position: relative;
+		height: 600px;
+		width: 100%;
+		&__image {
+			margin: 0 10px 0 10px;
+			height: 100%;
+			width: calc(100%/3 - 20px);
+		}
+	}
+}
+
+.double-image-container {
+	height: 100%;
+	width: 100%;
+	&__image {
+		width: 100%;
+		margin: 5px 0 5px;
+		height: calc(50% - 10px);
+		float: left;
+	}
+	@include respond-to('non-mobile') {
+		@include center-vertical;
+		box-sizing: border-box;
+		position: relative;
+		height: 650px;
+		width: 100%;
+		&__image {
+			margin: 0 10px 0 10px;
+			height: 100%;
+			width: calc(100%/2 - 20px);
+			&:nth-child(1){
+				background-position: right;
+			}
+			&:nth-child(2){
+				background-position: left;
+			}
+			&--no-margin{
+				margin: 0 0 0 0;
+				width: 50%;
+			}
+
+		}
+	}
+}
+.single-image-container {
+	@include center-vertical;
+	position: relative;
+	height: calc(100%/3);
+	width: 100%;
+	&__image {
+		width: 100%;
+		height: 100%;;
+	}
+	@include respond-to('non-mobile') {
 		@include center;
 		position: relative;
-		font-weight: 100;
-		line-height: 75px;
-		text-align: center;
-		margin: 0 0 0 0;
-		padding: 0 0 0 0;
-		font-size: 2em;
-		display: inline-block;
-	}
-	@include respond-to(non-mobile) {
-		position: absolute;
-		z-index: 2;
-		left: 60%;
-		top: 0;
-		height: 100px;
-		margin: 0 0 0 10px;
-		font-size: 1.5em;
-	}
-}
-
-.nav {
-	display: none;
-	@include respond-to(non-mobile) {
-		padding: 0 0 0 115px;
 		box-sizing: border-box;
-		display: inline;
-		position: absolute;
-		left: 60%;
-		top: 0;
-		width: 40%;
-		min-width: 475px;
-		height: 100px;
-		&__button {
-			@include center-vertical;
-			cursor: pointer;
-			position: relative;
-			float: left;
-			// margin: 0 10px 0 10px;
-			width: 100px;
-			height: 100%;
-			font-size: 1.3em;
-			&--active {
-				span {
-					text-decoration: underline;
-				}
-			}
-		}
-		span {
-			@include center;
-			position: relative;
-			display: inline-block;
-		}
-	}
-}
-
-.info {
-	display: inline-block;
-	position: relative;
-	margin: 0 10px 10px 10px;
-	text-align: center;
-	p {
-		margin: 5px 0 5px 0;
-	}
-	@include respond-to(non-mobile) {
-		top: 120px;
-		position: absolute;
-		width: 40%;
-		left: 60%;
-		display: inline-block;
-		color: black;
-		margin: 0 0 0 0;
-		box-sizing: border-box;
-		padding: 0 10px 0 10px;
-	}
-}
-
-.popup {
-	display: none;
-	@include respond-to(non-mobile) {
-		display: inline;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0,0,0,0.75);
-		z-index: 3;
-		&__inner {
-			@include center;
-			position: absolute;
-			background-color: white;
-			border-radius: 5px;
-			height: 500px;
-			width: 500px;
-			h2 {
-				@include center-horizontal;
-				position: relative;
-				display: inline-block;
-				margin: 10px 0 0 0;
-				font-size: 2em;
-				font-weight: 100;
-			}
-			span {
-				@include center-horizontal;
-				position: absolute;
-				display: inline-block;
-				margin: 10px 0 0 0;
-				font-size: 2em;
-				font-weight: 100;
-				bottom: 10px;
-				text-decoration: underline;
-			}
-		}
+		height: calc(100% - 100px);
+		width: calc(100% - 100px);
+		min-height: 650px;
 		&__image {
-			@include center;
-			position: absolute;
-			height: 380px;
-			width: 380px;
-			background-image: url('../imgs/july.jpg');
-			background-size: contain;
-			border-radius: 5px;
-		}
-		&__close {
-			font-weight: 100;
-			font-size: 0.8em;
-			position: absolute;
-			margin: 5px 5px 0 0;
-			right: 0;
-			display: inline-block;
-			cursor: pointer;
+			height: 100%;
+			width: 100%;
 		}
 	}
 }
 
-.music {
-	top: 250px;
-	height: 450px;
-	width: 100%;
-	margin: 0 0 10px 0;
-	box-sizing: border-box;
-	position: relative;
-	padding: 0 10px 0 10px;
-	@include respond-to(non-mobile) {
-		top: 120px;
-		padding: 0 40px 0 40px;
-		position: absolute;
-		width: 40%;
-		height: 60%;
-		min-height: 440px;
-		left: 60%;
-	}
-}
-
-.images {
-	padding: 5px 0 0 0;
-	position: relative;
-	&__img {
-		@include center-horizontal;
-		margin: 0 0 10px 0;
-		height: 90%;
-		width: 95%;
-		background-position: top;
-		position: relative;
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
-	height: 400px;
-	width: 100%;
-	@include respond-to(non-mobile) {
-		padding: 0 0 0 0;
-		width: 60%;
-		height: 100%;
-		position: absolute;
-		box-sizing: border-box;
-		&__img {
-			@include center;
-			position: absolute;
-			background-position: center;
-			height: 95%;
-			width: 95%;
-			&--portrait {
-				position: relative;
-				top: 35%;
-				left: 78%;
-				height: 55%;
-				width: 50%;
-				z-index: 2;
-			}
-		}
-	}
-}
-
-.videos {
-	display: none;
-	@include respond-to(non-mobile) {
-		top: 120px;
-		display: inline-block;
-		position: absolute;
-		width: 40%;
-		min-width: 500px;
-		height: 60%;
-		min-height: 500px;
-		left: 60%;
-	}
-	iframe {
-		@include center-horizontal;
-		top: 0;
-		position: relative;
-		width: 95%;
-		height: 70%;
-		min-height: 310px;
-	}
-	&__nav {
-		@include center-horizontal;
-		position: relative;
-		margin: 30px 0 0 0;
-		width: 300px;
-		height: 50px;
-	}
-	&__button {
-		height: 100%;
-		width: calc(33.333% - 20px);
-		margin: 0 10px 0 10px;
-		float: left;
-		border-radius: 5px;
-		cursor: pointer;
-		span {
-			@include center;
-			position: relative;
-			display: inline-block;
-			text-align: center;
-		}
-		&--active {
-			span {
-				text-decoration: underline;
-			}
-		}
-	}
+.image {
+	background: center/contain no-repeat;
 }
 
