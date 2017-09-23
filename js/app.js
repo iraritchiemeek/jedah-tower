@@ -12,3 +12,7 @@ iraApp.controller('mainController', function($scope) {
 
 	init()
 })
+
+$(window).on("load", function() {
+	$('.loading').hide()
+})
