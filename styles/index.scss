@@ -49,15 +49,20 @@ html, body {
 	height: 100%;
 	width: 100%;
 	@include respond-to('non-mobile') {
-		width: 80%;
+		width: 90%;
 		height: 80%;
+		min-width: 1000px;
+		min-height: 600px;
 	}
 }
 
 .image-strip {
-	background: center/cover no-repeat;
+	@include center-vertical;
+	position: relative;
+	background: left/cover no-repeat;
 	height: 100%;
 	float: left;
+	cursor: pointer;
 }
 
 .triple-image-container {

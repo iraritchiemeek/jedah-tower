@@ -13,62 +13,82 @@
 	<script src="js/angular/angular.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
-<body ng-controller="mainController" ng-init="currentSet = 1" ng-click=" currentSet == 12 ? currentSet = 1 : currentSet = currentSet+1">
-	<div class="image-strip-container" ng-init=setImageStripWidth>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
-		<div class="image-strip"></div>
+<body ng-controller="mainController" ng-init="currentSet = 0">
+	<div ng-show="currentSet==0" class="image-strip-container" ng-init=setImageStripWidth>
+		<div ng-click="currentSet = 6" class="image-strip" style="background-image: url('./imgs/shinjuku1.JPG');"></div>
+		<div ng-click="currentSet = 1" class="image-strip" style="background-image: url('./imgs/gbi-sunset.JPG');"></div>
+		<div ng-click="currentSet = 5" class="image-strip" style="background-image: url('./imgs/beeman.JPG');"></div>
+		<div ng-click="currentSet = 7" class="image-strip" style="background-image: url('./imgs/gbi-rocks.JPG');"></div>
+		<div ng-click="currentSet = 1" class="image-strip" style="background-image: url('./imgs/gbi-beach.JPG');"></div>
+		<div ng-click="currentSet = 1" class="image-strip" style="background-image: url('./imgs/horses1.JPG');"></div>
+		<div ng-click="currentSet = 6" class="image-strip" style="background-image: url('./imgs/akihabara1.JPG');"></div>
+		<div ng-click="currentSet = 8" class="image-strip" style="background-image: url('./imgs/gakugei.JPG');"></div>
+		<div ng-click="currentSet = 7" class="image-strip" style="background-image: url('./imgs/dogs.JPG');"></div>
+		<div ng-click="currentSet = 9" class="image-strip" style="background-image: url('./imgs/beardman.JPG');"></div>
+		<div ng-click="currentSet = 10" class="image-strip" style="background-image: url('./imgs/bus.JPG');"></div>
+		<div ng-click="currentSet = 13" class="image-strip" style="background-image: url('./imgs/toys.JPG');"></div>
+		<div ng-click="currentSet = 14" class="image-strip" style="background-image: url('./imgs/park.JPG');"></div>		
+		<div ng-click="currentSet = 4" class="image-strip" style="background-image: url('./imgs/drinks.JPG');"></div>		
+		<div ng-click="currentSet = 3" class="image-strip" style="background-image: url('./imgs/pimpcar.JPG');"></div>		
+		<div ng-click="currentSet = 2" class="image-strip" style="background-image: url('./imgs/bunny.JPG');"></div>		
+		<div ng-click="currentSet = 2" class="image-strip" style="background-image: url('./imgs/stripeman.JPG');"></div>		
+		<div ng-click="currentSet = 8" class="image-strip" style="background-image: url('./imgs/lightz.JPG');"></div>		
+ 		<div ng-click="currentSet = 5" class="image-strip" style="background-image: url('./imgs/bunnyman.JPG');"></div>
+		<div ng-click="currentSet = 12" class="image-strip" style="background-image: url('./imgs/shinjuku.JPG');"></div>		
+		<div ng-click="currentSet = 11" class="image-strip" style="background-image: url('./imgs/festival.JPG');"></div>		
+		<div ng-click="currentSet = 11" class="image-strip" style="background-image: url('./imgs/pinjacketman.JPG');"></div>		
 	</div>
-	<!-- <div class="single-image-container set-1" ng-show=" currentSet == 1">
-		<div class="single-image-container__image image" style="background-image: url('./imgs/tiles.JPG');"></div>
-	</div>
-	<div class="triple-image-container set-11" ng-show="currentSet == 2">
+	<div class="triple-image-container" ng-click="currentSet=0" ng-show="currentSet == 1">
 		<div class="triple-image-container__image image" style="background-image: url('./imgs/gbi-sunset.JPG');"></div>
 		<div class="triple-image-container__image image" style="background-image: url('./imgs/gbi-beach.JPG');"></div>
 		<div class="triple-image-container__image image" style="background-image: url('./imgs/horses1.JPG');"></div>
 	</div>
-	<div class="double-image-container set-2" ng-show="currentSet == 3">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/building1.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/building2.JPG');"></div>
+	<div class="double-image-container set-2" ng-click="currentSet=0" ng-show="currentSet == 2">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/bunny.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/stripeman.JPG');"></div>
 	</div>
-	<div class="double-image-container set-3" ng-show="currentSet == 4">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/gakugei.JPG');"></div>
+	<div class="triple-image-container set-3" ng-click="currentSet=0" ng-show="currentSet == 3">
+		<div class="triple-image-container__image image" style="background-image: url('./imgs/pimpcar.JPG');"></div>
+		<div class="triple-image-container__image image" style="background-image: url('./imgs/pimpcar.JPG');"></div>
+		<div class="triple-image-container__image image" style="background-image: url('./imgs/pimpcar.JPG');"></div>
 	</div>
-	<div class="single-image-container set-4" ng-show="currentSet == 5">
-		<div class="single-image-container__image image" style="background-image: url('./imgs/emblems.JPG');"></div>
+	<div class="single-image-container set-4" ng-click="currentSet=0" ng-show="currentSet == 4">
+		<div class="single-image-container__image image" style="background-image: url('./imgs/drinks.JPG');"></div>
 	</div>
-	<div class="single-image-container set-5" ng-show="currentSet == 6">
-		<div class="single-image-container__image image" style="background-image: url('./imgs/dogs.JPG');"></div>
-	</div>
-	<div class="triple-image-container set-6" ng-show="currentSet == 7">
-		<div class="triple-image-container__image image" style="background-image: url('./imgs/beardman.JPG');"></div>
-		<div class="triple-image-container__image image" style="background-image: url('./imgs/sumo.JPG');"></div>
-		<div class="triple-image-container__image image" style="background-image: url('./imgs/taxi.JPG');"></div>
-	</div>
-	<div class="double-image-container set-6" ng-show="currentSet == 8">
+	<div class="double-image-container set-5" ng-click="currentSet=0" ng-show="currentSet == 5">
 		<div class="double-image-container__image image" style="background-image: url('./imgs/bunnyman.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/buddha.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/beeman.JPG');"></div>
 	</div>
-	<div class="double-image-container set-7" ng-show="currentSet == 9">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/bus.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/puppy.JPG');"></div>
+	<div class="double-image-container set-6" ng-click="currentSet=0" ng-show="currentSet == 6">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/shinjuku1.JPG');"></div>
 	</div>
-	<div class="single-image-container set-8" ng-show="currentSet == 10">
+	<div class="double-image-container set-7" ng-click="currentSet=0" ng-show="currentSet == 7">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-rocks.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/dogs.JPG');"></div>
+	</div>
+	<div class="double-image-container set-8" ng-click="currentSet=0" ng-show="currentSet == 8">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/gakugei.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/lightz.JPG');"></div>
+	</div>
+	<div class="double-image-container set-9" ng-click="currentSet=0" ng-show="currentSet == 9">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/beardman.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/beardman.JPG');"></div>
+	</div>
+	<div class="single-image-container set-10" ng-click="currentSet=0" ng-show="currentSet == 10">
+		<div class="single-image-container__image image" style="background-image: url('./imgs/bus.JPG');"></div>
+	</div>
+	<div class="double-image-container set-11" ng-click="currentSet=0" ng-show="currentSet == 11">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/festival.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/pinjacketman.JPG');"></div>
+	</div>
+	<div class="single-image-container set-12" ng-click="currentSet=0" ng-show="currentSet == 12">
+		<div class="single-image-container__image image" style="background-image: url('./imgs/shinjuku.JPG');"></div>
+	</div>
+	<div class="single-image-container set-13" ng-click="currentSet=0" ng-show="currentSet == 13">
 		<div class="single-image-container__image image" style="background-image: url('./imgs/toys.JPG');"></div>
 	</div>
-	<div class="single-image-container set-9" ng-show="currentSet == 11">
+	<div class="single-image-container set-14" ng-click="currentSet=0" ng-show="currentSet == 14">
 		<div class="single-image-container__image image" style="background-image: url('./imgs/park.JPG');"></div>
 	</div>
-	<div class="double-image-container set-10" ng-show="currentSet == 12">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-beach1.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-beach2.JPG');"></div>
-	</div> -->
 </body>
