@@ -13,46 +13,62 @@
 	<script src="js/angular/angular.min.js"></script>
 	<script src="js/app.js"></script>
 </head>
-<body ng-controller="mainController" ng-init="currentSet = 1" ng-click="currentSet = currentSet+1">
-	<div class="single-image-container set-1" ng-show="currentSet == 12 ? currentSet = 1 : currentSet == 1">
-		<div class="single-image-container__image image" style="background-image: url('./imgs/dogs.JPG');"></div>
+<body ng-controller="mainController" ng-init="currentSet = 1" ng-click=" currentSet == 12 ? currentSet = 1 : currentSet = currentSet+1">
+	<div class="image-strip-container" ng-init=setImageStripWidth>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
+		<div class="image-strip"></div>
 	</div>
-	<div class="double-image-container set-2" ng-show="currentSet == 2">
+	<!-- <div class="single-image-container set-1" ng-show=" currentSet == 1">
+		<div class="single-image-container__image image" style="background-image: url('./imgs/tiles.JPG');"></div>
+	</div>
+	<div class="triple-image-container set-11" ng-show="currentSet == 2">
+		<div class="triple-image-container__image image" style="background-image: url('./imgs/gbi-sunset.JPG');"></div>
+		<div class="triple-image-container__image image" style="background-image: url('./imgs/gbi-beach.JPG');"></div>
+		<div class="triple-image-container__image image" style="background-image: url('./imgs/horses1.JPG');"></div>
+	</div>
+	<div class="double-image-container set-2" ng-show="currentSet == 3">
 		<div class="double-image-container__image image" style="background-image: url('./imgs/building1.JPG');"></div>
 		<div class="double-image-container__image image" style="background-image: url('./imgs/building2.JPG');"></div>
 	</div>
-<!-- 	<div class="triple-image-container set-2" ng-show="currentSet == 2">
-		<div class="triple-image-container__image image" style="background-image: url('./imgs/bunnyman.JPG');"></div>
+	<div class="double-image-container set-3" ng-show="currentSet == 4">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/gakugei.JPG');"></div>
+	</div>
+	<div class="single-image-container set-4" ng-show="currentSet == 5">
+		<div class="single-image-container__image image" style="background-image: url('./imgs/emblems.JPG');"></div>
+	</div>
+	<div class="single-image-container set-5" ng-show="currentSet == 6">
+		<div class="single-image-container__image image" style="background-image: url('./imgs/dogs.JPG');"></div>
+	</div>
+	<div class="triple-image-container set-6" ng-show="currentSet == 7">
 		<div class="triple-image-container__image image" style="background-image: url('./imgs/beardman.JPG');"></div>
 		<div class="triple-image-container__image image" style="background-image: url('./imgs/sumo.JPG');"></div>
-	</div> -->
-	<div class="double-image-container set-3" ng-show="currentSet == 3">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/puppy.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/fruit.JPG');"></div>
+		<div class="triple-image-container__image image" style="background-image: url('./imgs/taxi.JPG');"></div>
 	</div>
-	<div class="single-image-container set-4" ng-show="currentSet == 4">
+	<div class="double-image-container set-6" ng-show="currentSet == 8">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/bunnyman.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/buddha.JPG');"></div>
+	</div>
+	<div class="double-image-container set-7" ng-show="currentSet == 9">
+		<div class="double-image-container__image image" style="background-image: url('./imgs/bus.JPG');"></div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/puppy.JPG');"></div>
+	</div>
+	<div class="single-image-container set-8" ng-show="currentSet == 10">
 		<div class="single-image-container__image image" style="background-image: url('./imgs/toys.JPG');"></div>
 	</div>
-	<div class="single-image-container set-5" ng-show="currentSet == 5">
+	<div class="single-image-container set-9" ng-show="currentSet == 11">
 		<div class="single-image-container__image image" style="background-image: url('./imgs/park.JPG');"></div>
 	</div>
-	<div class="double-image-container set-6" ng-show="currentSet == 6">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/fire.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/fire.JPG');"></div>
-	</div>
-	<div class="double-image-container set-7" ng-show="currentSet == 7">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
-	</div>
-	<div class="double-image-container set-8" ng-show="currentSet == 8">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-beach2.JPG');"></div>
+	<div class="double-image-container set-10" ng-show="currentSet == 12">
 		<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-beach1.JPG');"></div>
-	</div>
-	<div class="single-image-container set-9" ng-show="currentSet == 9">
-		<div class="single-image-container__image image" style="background-image: url('./imgs/horses1.JPG');"></div>
-	</div>
-	<div class="double-image-container set-10" ng-show="currentSet == 10">
-		<div class="double-image-container__image image" style="background-image: url('./imgs/mic-olly.JPG');"></div>
-		<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-tree.JPG');"></div>
-	</div>
+		<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-beach2.JPG');"></div>
+	</div> -->
 </body>

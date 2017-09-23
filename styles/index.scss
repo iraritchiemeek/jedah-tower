@@ -43,6 +43,23 @@ html, body {
 	cursor: pointer;
 }
 
+.image-strip-container {
+	@include center;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	@include respond-to('non-mobile') {
+		width: 80%;
+		height: 80%;
+	}
+}
+
+.image-strip {
+	background: center/cover no-repeat;
+	height: 100%;
+	float: left;
+}
+
 .triple-image-container {
 	height: 100%;
 	width: 100%;
@@ -56,7 +73,8 @@ html, body {
 		@include center-vertical;
 		box-sizing: border-box;
 		position: relative;
-		height: 600px;
+		height: calc(100% - 50px);
+		min-height: 650px;
 		width: 100%;
 		&__image {
 			margin: 0 10px 0 10px;
@@ -79,7 +97,8 @@ html, body {
 		@include center-vertical;
 		box-sizing: border-box;
 		position: relative;
-		height: 650px;
+		height: calc(100% - 50px);
+		min-height: 650px;
 		width: 100%;
 		&__image {
 			margin: 0 10px 0 10px;
@@ -112,8 +131,8 @@ html, body {
 		@include center;
 		position: relative;
 		box-sizing: border-box;
-		height: calc(100% - 100px);
-		width: calc(100% - 100px);
+		height: calc(100% - 50px);
+		width: calc(100% - 50px);
 		min-height: 650px;
 		&__image {
 			height: 100%;
