@@ -73,8 +73,8 @@ html, body {
   height: 100%;
   width: 100%; }
   .double-image-container__image {
-    width: 100%;
-    margin: 5px 0 5px;
+    width: calc(100% - 20px);
+    margin: 5px 10px 5px 10px;
     height: calc(50% - 10px);
     float: left; }
   @media only screen and (min-width: 64em) {
