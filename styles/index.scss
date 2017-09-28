@@ -43,6 +43,12 @@ html, body {
 	cursor: pointer;
 }
 
+.fullscreen {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
 .image-strip-container {
 	@include center;
 	position: absolute;
@@ -63,6 +69,11 @@ html, body {
 	height: 100%;
 	float: left;
 	cursor: pointer;
+	@include respond-to('non-mobile') {
+		border-left: 3px solid black;
+		border-right: 3px solid black;
+		box-sizing: border-box;
+	}
 }
 
 .triple-image-container {
@@ -75,12 +86,12 @@ html, body {
 		float: left;
 	}
 	@include respond-to('non-mobile') {
-		@include center-vertical;
+		@include center;
 		box-sizing: border-box;
 		position: relative;
 		height: calc(100% - 50px);
 		min-height: 650px;
-		width: 100%;
+		width: 90%;
 		&__image {
 			margin: 0 10px 0 10px;
 			height: 100%;
@@ -99,12 +110,12 @@ html, body {
 		float: left;
 	}
 	@include respond-to('non-mobile') {
-		@include center-vertical;
+		@include center;
 		box-sizing: border-box;
 		position: relative;
-		height: calc(100% - 50px);
+		height: calc(100% - 100px);
 		min-height: 650px;
-		width: 100%;
+		width: 90%;
 		&__image {
 			margin: 0 10px 0 10px;
 			height: 100%;
@@ -124,7 +135,7 @@ html, body {
 	}
 }
 .single-image-container {
-	@include center-vertical;
+	@include center;
 	position: relative;
 	height: calc(100%/3);
 	width: 100%;
@@ -136,8 +147,8 @@ html, body {
 		@include center;
 		position: relative;
 		box-sizing: border-box;
-		height: calc(100% - 50px);
-		width: calc(100% - 50px);
+		height: calc(100% - 100px);
+		width: calc(100% - 100px);
 		min-height: 650px;
 		&__image {
 			height: 100%;

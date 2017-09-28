@@ -10,6 +10,11 @@ html, body {
   background-color: black;
   cursor: pointer; }
 
+.fullscreen {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
 .image-strip-container {
   top: 50%;
   left: 50%;
@@ -34,6 +39,11 @@ html, body {
   height: 100%;
   float: left;
   cursor: pointer; }
+  @media only screen and (min-width: 64em) {
+    .image-strip {
+      border-left: 3px solid black;
+      border-right: 3px solid black;
+      box-sizing: border-box; } }
 
 .triple-image-container {
   height: 100%;
@@ -46,13 +56,14 @@ html, body {
   @media only screen and (min-width: 64em) {
     .triple-image-container {
       top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       box-sizing: border-box;
       position: relative;
       height: calc(100% - 50px);
       min-height: 650px;
-      width: 100%; }
+      width: 90%; }
       .triple-image-container__image {
         margin: 0 10px 0 10px;
         height: 100%;
@@ -69,13 +80,14 @@ html, body {
   @media only screen and (min-width: 64em) {
     .double-image-container {
       top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
       box-sizing: border-box;
       position: relative;
-      height: calc(100% - 50px);
+      height: calc(100% - 100px);
       min-height: 650px;
-      width: 100%; }
+      width: 90%; }
       .double-image-container__image {
         margin: 0 10px 0 10px;
         height: 100%;
@@ -90,8 +102,9 @@ html, body {
 
 .single-image-container {
   top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   position: relative;
   height: calc(100%/3);
   width: 100%; }
@@ -106,8 +119,8 @@ html, body {
       transform: translate(-50%, -50%);
       position: relative;
       box-sizing: border-box;
-      height: calc(100% - 50px);
-      width: calc(100% - 50px);
+      height: calc(100% - 100px);
+      width: calc(100% - 100px);
       min-height: 650px; }
       .single-image-container__image {
         height: 100%;
