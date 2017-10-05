@@ -49,6 +49,42 @@ html, body {
 	width: 100%;
 }
 
+.image-jumble-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	&__left-block {
+		height: 100%;
+		width: 35%;
+		background-color: white;
+		float: left;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 1;
+	}
+	&__right-block {
+		z-index: 2;
+		position: relative;
+		height: 100%;
+		width: 65%;
+		background-color: black;
+		float: right;
+		box-sizing: border-box;
+	}
+	@include respond-to('non-mobile') {
+		@include center-horizontal;
+		position: relative;
+		width: 675px;
+	}
+}
+
+.rotated-image {
+	height: 40%;
+	width: 100%;
+	position: absolute;
+	background: center/cover no-repeat;
+}
+
 .image-strip-container {
 	@include center;
 	position: absolute;
