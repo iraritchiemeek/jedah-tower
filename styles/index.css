@@ -7,34 +7,65 @@ html, body {
   margin: 0 0 0 0;
   box-sizing: border-box;
   font-family: 'Open Sans';
-  background-color: black;
-  cursor: pointer; }
+  background-color: black; }
 
 .fullscreen {
   position: relative;
   height: 100%;
   width: 100%; }
 
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 .image-jumble-container {
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  background-clip: content-box;
+  animation: Gradient 15s ease infinite; }
+  @media only screen and (min-width: 64em) {
+    .image-jumble-container {
+      padding: 20px 0 20px 0; } }
   .image-jumble-container__left-block {
     height: 100%;
     width: 35%;
-    background-color: white;
     float: left;
     box-sizing: border-box;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    padding: 20px 0 20px 0;
+    overflow: hidden; }
   .image-jumble-container__right-block {
     z-index: 2;
     position: relative;
     height: 100%;
     width: 65%;
     background-color: black;
+    padding: 5px 5px 5px 0;
+    background-clip: content-box;
     float: right;
     box-sizing: border-box; }
+    .image-jumble-container__right-block h1 {
+      margin: 0 0 0 10px;
+      font-size: 3em;
+      color: white;
+      position: relative;
+      font-weight: 100; }
+    .image-jumble-container__right-block h2 {
+      display: inline-block;
+      position: relative;
+      margin: 10px;
+      float: left;
+      color: white;
+      font-weight: 100;
+      cursor: pointer; }
   @media only screen and (min-width: 64em) {
     .image-jumble-container {
       left: 50%;
@@ -44,10 +75,11 @@ html, body {
       width: 675px; } }
 
 .rotated-image {
-  height: 40%;
+  height: 50%;
   width: 100%;
   position: absolute;
-  background: center/cover no-repeat; }
+  background: center/cover no-repeat;
+  box-sizing: border-box; }
 
 .image-strip-container {
   top: 50%;
