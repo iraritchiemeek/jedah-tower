@@ -6,6 +6,11 @@ iraApp.controller('mainController', ["$scope", function($scope) {
 		$scope.randomImageJumbleCss()
 	}
 
+	$scope.scrollTo = function (e) {
+		e == 'top' ? element = '.image-jumble-container' : element = '#set-' + e.target.id	
+		$(element)[0].scrollIntoView({block: 'center', behavior: 'smooth'})
+	}
+
 	$scope.setImageStripWidth = function () {
 		$('.image-strip').css({'width': (100/$('.image-strip').length)+'%'})
 	}
@@ -19,7 +24,6 @@ iraApp.controller('mainController', ["$scope", function($scope) {
 			var angle = 'rotate(' + posneg + Math.floor((Math.random()*10)+1) +'deg)'
 			var left = Math.floor((Math.random()*80) + 20) + '%'
 			$(v).css({'top': top, 'transform': angle, 'left': left, 'z-index': 0})
-			// i == image_count - 1 ? $scope.applyZindex() : ''
 		})
 		$scope.applyZindex()
 	}

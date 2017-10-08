@@ -7,29 +7,31 @@ html, body {
   margin: 0 0 0 0;
   box-sizing: border-box;
   font-family: 'Open Sans';
-  background-color: black; }
+  overflow: hidden; }
 
 .fullscreen {
   position: relative;
   height: 100%;
   width: 100%; }
+  .fullscreen--white {
+    background-color: white; }
 
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%; }
-  50% {
-    background-position: 100% 50%; }
-  100% {
-    background-position: 0% 50%; } }
+.to-top {
+  position: absolute;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  z-index: 3; }
+  .to-top span {
+    font-size: 2em; }
+
 .image-jumble-container {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   overflow: hidden;
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-  background-size: 400% 400%;
-  background-clip: content-box;
-  animation: Gradient 15s ease infinite; }
+  background-color: black;
+  background-clip: content-box; }
   @media only screen and (min-width: 64em) {
     .image-jumble-container {
       padding: 20px 0 20px 0; } }
@@ -47,25 +49,27 @@ html, body {
     position: relative;
     height: 100%;
     width: 65%;
-    background-color: black;
+    background-color: white;
     padding: 5px 5px 5px 0;
     background-clip: content-box;
     float: right;
     box-sizing: border-box; }
     .image-jumble-container__right-block h1 {
+      color: black;
       margin: 0 0 0 10px;
       font-size: 3em;
-      color: white;
-      position: relative;
-      font-weight: 100; }
+      position: relative; }
     .image-jumble-container__right-block h2 {
+      color: black;
+      float: left;
       display: inline-block;
       position: relative;
       margin: 10px;
       float: left;
-      color: white;
       font-weight: 100;
       cursor: pointer; }
+      .image-jumble-container__right-block h2:hover {
+        color: white; }
   @media only screen and (min-width: 64em) {
     .image-jumble-container {
       left: 50%;
@@ -172,8 +176,8 @@ html, body {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: relative;
-  height: calc(100%/3);
-  width: 100%; }
+  height: 100%;
+  width: 90%; }
   .single-image-container__image {
     width: 100%;
     height: 100%; }
@@ -209,7 +213,7 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: black; }
+  background-color: white; }
   .loading__container {
     top: 50%;
     left: 50%;
@@ -221,7 +225,7 @@ html, body {
   .loading__icon {
     width: 60px;
     height: 60px;
-    background-color: white;
+    background-color: black;
     border-radius: 100%;
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
     animation: sk-scaleout 1.0s infinite ease-in-out; }

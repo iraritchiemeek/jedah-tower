@@ -23,33 +23,39 @@
 	<div class="fullscreen fullscreen--white">	
 		<div class="image-jumble-container">
 			<div class="image-jumble-container__left-block">
+				<div class="rotated-image" style="background-image: url('./imgs/gbi-rocks.JPG');"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/horses1.JPG');"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/shinjuku1.JPG')"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/ollymic.JPG');"></div>		
 				<div class="rotated-image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/stripeman.JPG');"></div>		
 				<div class="rotated-image" style="background-image: url('./imgs/gbi-branch.JPG');"></div>		
 				<div class="rotated-image" style="background-image: url('./imgs/toys.JPG');;"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/gbi-sunset.JPG');"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/gbi-beach.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/drinks.JPG');"></div>		
 				<div class="rotated-image" style="background-image: url('./imgs/beardman.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/bunny.JPG');"></div>		
 				<div class="rotated-image" style="background-image: url('./imgs/smilelady.JPG');"></div>		
-				<div class="rotated-image" style="background-image: url('./imgs/ploofdog.JPG');"></div>		
 		 		<div class="rotated-image" style="background-image: url('./imgs/bunnyman.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/car.JPG');"></div>		
-				<div class="rotated-image" style="background-image: url('./imgs/dancers.JPG');"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/sleep.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/mansion.JPG');"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/view.JPG');"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/blind.JPG');"></div>
 				<div class="rotated-image" style="background-image: url('./imgs/steel.JPG');"></div>
+				<div class="rotated-image" style="background-image: url('./imgs/bridge.JPG');"></div>
+				<div class="rotated-image" style="background-image: url('./imgs/future.JPG');"></div>
+				<div class="rotated-image" style="background-image: url('./imgs/gradient.JPG');"></div>
+				<div class="rotated-image" style="background-image: url('./imgs/sunset.JPG');"></div>
 			</div>
 			<div class="image-jumble-container__right-block">
-				<h1>Ira</h1>				
-				<h2>Photos</h2>				
-				<h2>Contact</h2>				
+				<h1>Ira</h1>
+				<h2 ng-click="scrollTo($event)" id="1">a</h2>				
+				<h2 ng-click="scrollTo($event)" id='2'>b</h2>				
+				<h2 ng-click="scrollTo($event)" id='3'>c</h2>				
+				<h2 ng-click="scrollTo($event)" id='4'>d</h2>				
+				<h2 ng-click="scrollTo($event)" id='5'>e</h2>				
+				<h2 ng-click="scrollTo($event)" id='6'>f</h2>				
+				<h2 ng-click="scrollTo($event)" id='7'>g</h2>				
+				<h2 ng-click="scrollTo($event)" id='8'>h</h2>				
+				<h2 ng-click="scrollTo($event)" id='9'>i</h2>				
+				<h2 ng-click="scrollTo($event)" id='10'>j</h2>				
 			</div>
 		</div>
 		<!-- <div class="image-strip-container" ng-init=setImageStripWidth>
@@ -74,67 +80,74 @@
 			<div class="image-strip" style="background-image: url('./imgs/dancers.JPG'); background-position: 42% 0%;"></div>		
 		</div> -->
 	</div>
-	<div class="fullscreen">	
-		<div class="single-image-container">
-			<div class="single-image-container__image image" style="background-image: url('./imgs/dancers.JPG');"></div>
+	<div class="fullscreen" id="set-1">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
+		<div class="double-image-container">
+			<div class="double-image-container__image image" style="background-image: url('./imgs/beardman.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/bunnyman.JPG');"></div>
 		</div>
 	</div>
-	<div class="fullscreen">	
-		<div class="triple-image-container">
-			<div class="triple-image-container__image image" style="background-image: url('./imgs/beardman.JPG');"></div>
-			<div class="triple-image-container__image image" style="background-image: url('./imgs/bunnyman.JPG');"></div>
-			<div class="triple-image-container__image image" style="background-image: url('./imgs/pirate.JPG');"></div>
+	<div class="fullscreen" id="set-2">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
+		<div class="double-image-container">
+			<div class="double-image-container__image image" style="background-image: url('./imgs/sunset.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/gradient.JPG');"></div>
 		</div>
 	</div>
-	<div class="fullscreen">	
+	<div class="fullscreen" id="set-3">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
 		<div class="triple-image-container">
 			<div class="triple-image-container__image image" style="background-image: url('./imgs/horses1.JPG');"></div>
 			<div class="triple-image-container__image image" style="background-image: url('./imgs/gbi-beach.JPG');"></div>
 			<div class="triple-image-container__image image" style="background-image: url('./imgs/gbi-sunset.JPG');"></div>
 		</div>
 	</div>
-	<div class="fullscreen">	
+	<div class="fullscreen" id="set-4">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
 		<div class="double-image-container">
 			<div class="double-image-container__image image" style="background-image: url('./imgs/shinjuku1.JPG');"></div>
 			<div class="double-image-container__image image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
 		</div>
 	</div>
-	<div class="fullscreen">	
-		<div class="single-image-container">
-			<div class="single-image-container__image image" style="background-image: url('./imgs/drinks.JPG');"></div>
-		</div>
-	</div>
-	<div class="fullscreen">	
+	<div class="fullscreen" id="set-5">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
 		<div class="double-image-container">
-			<div class="double-image-container__image image" style="background-image: url('./imgs/stripeman.JPG');"></div>
-			<div class="double-image-container__image image" style="background-image: url('./imgs/bunny.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/toys.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/smilelady.JPG');"></div>
 		</div>
 	</div>
-	<div class="fullscreen">	
-		<div class="single-image-container">
-			<div class="single-image-container__image image" style="background-image: url('./imgs/toys.JPG');"></div>
-		</div>
-	</div>
-	<div class="fullscreen">	
+	<div class="fullscreen" id="set-6">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
 		<div class="double-image-container">
 			<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-branch.JPG');"></div>
 			<div class="double-image-container__image image" style="background-image: url('./imgs/ollymic.JPG');"></div>
 		</div>
 	</div>
-	<div class="fullscreen">	
-		<div class="single-image-container">
-			<div class="single-image-container__image image" style="background-image: url('./imgs/dogs.JPG');"></div>
-		</div>
-	</div>
-	<div class="fullscreen">	
+	<div class="fullscreen" id="set-7">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
 		<div class="double-image-container">
-			<div class="double-image-container__image image" style="background-image: url('./imgs/ploofdog.JPG');"></div>
-			<div class="double-image-container__image image" style="background-image: url('./imgs/car.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/future.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/bridge.JPG');"></div>
 		</div>
 	</div>
-	<div class="fullscreen">	
+	<div class="fullscreen" id="set-8">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
+		<div class="double-image-container">
+			<div class="double-image-container__image image" style="background-image: url('./imgs/blind.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/view.JPG');"></div>
+		</div>
+	</div>
+	<div class="fullscreen" id="set-9">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
 		<div class="single-image-container">
-			<div class="single-image-container__image image" style="background-image: url('./imgs/smilelady.JPG');"></div>
+			<div class="single-image-container__image image" style="background-image: url('./imgs/sleep.JPG');"></div>
+		</div>
+	</div>
+	<div class="fullscreen" id="set-10">	
+		<div class="to-top" ng-click="scrollTo('top')"><span>&uarr;</span></div>
+		<div class="double-image-container">
+			<div class="double-image-container__image image" style="background-image: url('./imgs/gbi-rocks.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/steel.JPG');"></div>
 		</div>
 	</div>
 </body>
