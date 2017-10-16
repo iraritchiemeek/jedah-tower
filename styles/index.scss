@@ -43,24 +43,42 @@ html, body {
 	// background-color: black;
 }
 
+.mobile_test {
+	display: none;
+	@include respond-to('non-mobile') {
+		display: block;
+	}
+}
+
 .fullscreen {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	&--white {
-		background-color: white;
+	&--home {
+		box-sizing: border-box;
+		border: 40px solid #D62503;
 	}
 }
 
-.to-top {
+.arrows {
 	position: absolute;
 	display: inline-block;
 	margin: 10px;
 	cursor: pointer;
 	z-index: 3;
-	span {
+	&__arrow {
+		color: #D62503;
 		font-size: 2em;
+		display: inline-block;
+		float: left;
+		&:hover {
+			bottom: 15px;
+		}
 	}
+	// &__right {
+	// 	display: inline-block;
+	// 	float: left;
+	// }
 }
 
 .image-jumble-container {
@@ -103,14 +121,14 @@ html, body {
 		h2 {
 			color: black;
 			float: left;
-			display: inline-block;
+			// display: inline-block;
 			position: relative;
 			margin: 10px;
 			float: left;
 			font-weight: 100;
 			cursor: pointer;
 			&:hover {
-				color: white;
+				font-weight: bold;
 			}
 		}
 	}
@@ -126,33 +144,32 @@ html, body {
 	width: 100%;
 	position: absolute;
 	background: center/cover no-repeat;
-	// transition-duration: 0.5s;
 	box-sizing: border-box;
 }
 
 .image-strip-container {
-	@include center;
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	@include respond-to('non-mobile') {
+		@include center;
 		width: 90%;
 		height: 80%;
-		min-width: 1000px;
+		min-width: 930px;
 		min-height: 600px;
 	}
 }
 
 .image-strip {
-	@include center-vertical;
 	position: relative;
 	background: center/cover no-repeat;
 	height: 100%;
 	float: left;
 	cursor: pointer;
 	@include respond-to('non-mobile') {
-		border-left: 3px solid black;
-		border-right: 3px solid black;
+		@include center-vertical;
+		border-left: 3px solid white;
+		border-right: 3px solid white;
 		box-sizing: border-box;
 	}
 }
@@ -251,7 +268,12 @@ html, body {
 
 .loading {
 	z-index: 2;
+	@include center;
 	position: absolute;
+	h1 {
+		color: white;
+		font-size: 2em;
+	}
 	width: 100%;
 	height: 100%;
 	background-color: white;
@@ -289,4 +311,5 @@ html, body {
     opacity: 0;
   }
 }
+
 
