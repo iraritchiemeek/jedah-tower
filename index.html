@@ -26,67 +26,47 @@
 </head>
 <body ng-controller="mainController">
 	<div class="mobile_test"></div>
-	<div class="loading">
-		<div class="loading__container">
-			<div class="loading__icon"></div>
-		</div>
-	</div>
-	<!-- <div class="fullscreen fullscreen--white">	
-		<div class="image-jumble-container">
-			<div class="image-jumble-container__left-block">
-				<div class="rotated-image" style="background-image: url('./imgs/gbi-rocks.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/horses1.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/shinjuku1.JPG')"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/ollymic.JPG');"></div>		
-				<div class="rotated-image" style="background-image: url('./imgs/akihabara1.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/gbi-branch.JPG');"></div>		
-				<div class="rotated-image" style="background-image: url('./imgs/toys.JPG');;"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/gbi-sunset.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/gbi-beach.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/beardman.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/smilelady.JPG');"></div>		
-		 		<div class="rotated-image" style="background-image: url('./imgs/bunnyman.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/sleep.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/view.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/blind.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/steel.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/bridge.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/future.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/gradient.JPG');"></div>
-				<div class="rotated-image" style="background-image: url('./imgs/sunset.JPG');"></div>
+	<div class="fullscreen fullscreen--home" id="set-0">
+		<div class="loading">
+			<div class="loading__container">
+				<div class="loading__icon"></div>
 			</div>
-			<div class="image-jumble-container__right-block">
-				<h1>Ira</h1>
-				<div class="arrows">
-					<div ng-click="scrollTo('1')" class="arrows__arrow">&larr;</div>
-					<div class="arrows__arrow">&rarr;</div>
-				</div>
-			</div>
-		</div> -->
-	<div class="fullscreen fullscreen--home" id="set-0">	
+		</div>	
 		<div class="image-strip-container" ng-init=setImageStripWidth>
+				<div class="image-strip" style="background-image: url('./imgs/pixels.JPG'); background-position: 35% 40%;"></div>
+				<div class="image-strip" style="background-image: url('./imgs/yellowcar.JPG'); background-position: 48% 40%;"></div>
+				<div class="image-strip" style="background-image: url('./imgs/green.JPG'); background-position: 35% 40%;"></div>
+				<div class="image-strip" style="background-image: url('./imgs/water.JPG'); background-position: 45% 40%;"></div>
+				<div class="image-strip" style="background-image: url('./imgs/bluewall.JPG'); background-position: 35% 40%;"></div>
+			</div>
+		</div>
+		<!-- <div class="image-strip-container" ng-init=setImageStripWidth>
 			<div ng-click="scrollTo('3')" class="image-strip" style="background-image: url('./imgs/horses1.JPG'); background-position: 35% 40%;"></div>
 			<div ng-click="scrollTo('4')" class="image-strip" style="background-image: url('./imgs/akihabara1.JPG'); background-position: 25% 60%;"></div>
 			<div ng-click="scrollTo('5')" class="image-strip" style="background-image: url('./imgs/smilelady.JPG'); background-position: 63% 40%;"></div>		
 			<div ng-click="scrollTo('3')" class="image-strip" style="background-image: url('./imgs/gbi-sunset.JPG'); background-position: 41% 35%;"></div>
+	 		<div ng-click="scrollTo('11')" class="image-strip" style="background-image: url('./imgs/tiles.JPG'); background-position: 60% 0%;"></div>
 			<div ng-click="scrollTo('3')" class="image-strip" style="background-image: url('./imgs/gbi-beach.JPG'); background-position: 41% 90%;"></div>
 			<div ng-click="scrollTo('1')" class="image-strip" style="background-image: url('./imgs/beardman.JPG'); background-position: 56% 25%;"></div>
 	 		<div ng-click="scrollTo('7')" class="image-strip" style="background-image: url('./imgs/bridge.JPG'); background-position: 30% 61%;"></div>
+	 		<div ng-click="scrollTo('11')" class="image-strip" style="background-image: url('./imgs/green.JPG'); background-position: 30% 0%;"></div>
 	 		<div ng-click="scrollTo('1')" class="image-strip" style="background-image: url('./imgs/bunnyman.JPG'); background-position: 50% 58%;"></div>
 	 		<div ng-click="scrollTo('4')" class="image-strip" style="background-image: url('./imgs/singapore.JPG'); background-position: 61% 30%;"></div>
 	 		<div ng-click="scrollTo('8')" class="image-strip" style="background-image: url('./imgs/blue.JPG'); background-position: 30% 60%;"></div>
 	 		<div ng-click="scrollTo('7')" class="image-strip" style="background-image: url('./imgs/future.JPG'); background-position: 51% 40%;"></div>
 			<div ng-click="scrollTo('6')" class="image-strip" style="background-image: url('./imgs/ollymic.JPG'); background-position: 41% 40%;"></div>		
+	 		<div ng-click="scrollTo('10')" class="image-strip" style="background-image: url('./imgs/smallman.JPG'); background-position: 53% 75%;"></div>
 			<div ng-click="scrollTo('9')" class="image-strip" style="background-image: url('./imgs/toys.JPG'); background-position: 100% 47%;"></div>
 	 		<div ng-click="scrollTo('2')" class="image-strip" style="background-image: url('./imgs/gradient.JPG'); background-position: 53% 0%;"></div>
 	 		<div ng-click="scrollTo('6')" class="image-strip" style="background-image: url('./imgs/sleep.JPG'); background-position: 47% 49%;"></div>
-	 		<div ng-click="scrollTo('2')" class="image-strip" style="background-image: url('./imgs/sunset.JPG'); background-position: 59% 85%;"></div>
 	 		<div ng-click="scrollTo('4')" class="image-strip" style="background-image: url('./imgs/flowers.JPG'); background-position: 26% 75%;"></div>
 	 		<div ng-click="scrollTo('8')" class="image-strip" style="background-image: url('./imgs/blind.JPG'); background-position: 39% 80%;"></div>
-	 		<div ng-click="scrollTo('5')" class="image-strip" style="background-image: url('./imgs/stripelady.JPG'); background-position: 43% 0%;"></div>
+	 		<div ng-click="scrollTo('5')" class="image-strip" style="background-image: url('./imgs/stripelady.JPG'); background-position: 43% 45%;"></div>
+	 		<div ng-click="scrollTo('10')" class="image-strip" style="background-image: url('./imgs/lin.JPG'); background-position: 50% 50%;"></div>
+	 		<div ng-click="scrollTo('2')" class="image-strip" style="background-image: url('./imgs/nightbuilding.JPG'); background-position: 67% 50%;"></div>
 		</div>
-	</div>
-	</div>	
+	</div> -->
+	<!-- </div>	 -->
 	<div class="fullscreen" id="set-1">	
 		<div class="arrows">
 			<div ng-click="scrollTo('0')" class="arrows__arrow">&uarr;</div>
@@ -101,7 +81,7 @@
 			<div ng-click="scrollTo('0')" class="arrows__arrow">&uarr;</div>
 		</div>
 		<div class="double-image-container">
-			<div class="double-image-container__image image" style="background-image: url('./imgs/sunset.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/nightbuilding.JPG');"></div>
 			<div class="double-image-container__image image" style="background-image: url('./imgs/gradient.JPG');"></div>
 		</div>
 	</div>
@@ -167,6 +147,24 @@
 		</div>
 		<div class="single-image-container">
 			<div class="single-image-container__image image" style="background-image: url('./imgs/toys.JPG');"></div>
+		</div>
+	</div>
+	<div class="fullscreen" id="set-10">	
+		<div class="arrows">
+			<div ng-click="scrollTo('0')" class="arrows__arrow">&uarr;</div>
+		</div>
+		<div class="double-image-container">
+			<div class="double-image-container__image image" style="background-image: url('./imgs/lin.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/smallman.JPG');"></div>
+		</div>
+	</div>
+	<div class="fullscreen" id="set-11">	
+		<div class="arrows">
+			<div ng-click="scrollTo('0')" class="arrows__arrow">&uarr;</div>
+		</div>
+		<div class="double-image-container">
+			<div class="double-image-container__image image" style="background-image: url('./imgs/green.JPG');"></div>
+			<div class="double-image-container__image image" style="background-image: url('./imgs/tiles.JPG');"></div>
 		</div>
 	</div>
 </body>

@@ -56,7 +56,7 @@ html, body {
 	width: 100%;
 	&--home {
 		box-sizing: border-box;
-		border: 40px solid #D62503;
+		border: 40px solid black;
 	}
 }
 
@@ -67,7 +67,7 @@ html, body {
 	cursor: pointer;
 	z-index: 3;
 	&__arrow {
-		color: #D62503;
+		color: black;
 		font-size: 2em;
 		display: inline-block;
 		float: left;
@@ -166,11 +166,18 @@ html, body {
 	height: 100%;
 	float: left;
 	cursor: pointer;
+	// transition-duration: 1s;
 	@include respond-to('non-mobile') {
 		@include center-vertical;
 		border-left: 3px solid white;
 		border-right: 3px solid white;
 		box-sizing: border-box;
+	}
+	&:hover {
+		// background-color: black;
+		// background-image: none !important;
+		background-size: 1%;
+		background-repeat: repeat;
 	}
 }
 
@@ -267,16 +274,18 @@ html, body {
 }
 
 .loading {
-	z-index: 2;
 	@include center;
+	z-index: 2;
 	position: absolute;
+	// padding: 17px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	background-color: white;
 	h1 {
 		color: white;
 		font-size: 2em;
 	}
-	width: 100%;
-	height: 100%;
-	background-color: white;
 	&__container {
 		@include center;
 		position: relative;
